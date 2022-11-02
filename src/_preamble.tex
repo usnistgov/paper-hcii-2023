@@ -1,0 +1,53 @@
+\documentclass[runningheads]{llncs}
+
+% math/symbols
+    % \usepackage{
+    %     amsmath, 
+    %     amsfonts,
+    %     amssymb,
+    %     mathtools, 
+    %     gensymb, 
+    %     siunitx, 
+    % }
+% style prefs
+\usepackage{
+    graphicx,
+    % dblfloatfix,
+    microtype,
+    multirow,
+    tabulary,
+    booktabs,
+    rotating,
+    caption,
+    fancyhdr
+}
+% special options
+% \usepackage[mathscr]{euscript}
+\usepackage[hyphens]{url}
+\usepackage[smartEllipses,hybrid,inlineFootnotes]{markdown}
+    
+% macros/commands/setup
+\captionsetup[table]{skip=10pt}
+\newcommand{\rowgroup}[1]{\hspace{-1em}#1}
+
+\pagestyle{fancy}
+\fancyhf{} % sets both header and footer to nothing
+\renewcommand{\headrulewidth}{0pt}
+\lfoot{
+    \rm\hskip1.55in\hfil\thepage%
+     \hfil \\
+    \small\textit{This  material  is  declared  a  work  of  the  U.S.  Government  and  is  not  subject  to  copyright  protection in the United States. \\
+    Approved for public release; distribution is unlimited.}
+}
+
+% declare the path(s) where your graphic files are
+\graphicspath{{./img/}}
+% and their extensions so you won't have to specify these with
+% every instance of \includegraphics
+\DeclareGraphicsExtensions{.pdf,.jpeg,.png,.PNG}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\let\vec\mathbf
+\newcommand{\Like}{\mathcal{L}}
+
+
+\begin{document}
