@@ -61,7 +61,14 @@ Our case study demonstrates the advantages of approaching schema development via
 We show how entities (or "tags") can be aggregated from text data and structured into a taxonomy, which is a schema that implies a partial ordering of entities with parent, child, and sibling relationships.
 Mining tag taxonomies from text data is a requisite for capturing semantic relations and modeling word associations.
 For example, organizing tag information in a taxonomy helps to structure valid groups of tags to describe a certain concept.
+**Assimilation**: 
+![Assimilation](src/images/assimilate.png)
+The original subtree is unchanged after the node "Duck" is added.
 
+**Accommodation**: 
+![Accommodation](src/images/accommodate.png)
+When the node "Cow" is included in the graph, the edge connecting it is deemed incorrect, either by a human-in-the-loop or machine learning.
+The parent node is changed to "Farm Animals" in order to correct the schema so that it reflects reality. Accommodation modifies the original subtree.
 
 ## Task analysis
 We can build a deeper task analysis of the decisions that get made in this context. 
@@ -71,7 +78,8 @@ Treating the Scaffold as an agent, it must:
 
 With just a human, this is like grounded theory. 
 With just a machine, it's single-linkage clustering (if we can assume a metric space)
-
+Using a formal task analysis to formulate the goals and methods at each step as the Scaffold develops a taxonomy, we are able to map error probabilities and cognitive loads to subtasks.
+This insight guides the development of a workflow to optimize both the human and machine roles within the Scaffold.
 ## Proof-of-concept
 using some algorithms and stuff to do taxonomy building in an HCAI way (we made this). 
 Also discuss gaps and future work that the proposed framework makes obvious would be super helpful here. 
