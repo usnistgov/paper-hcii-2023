@@ -61,12 +61,19 @@ Our case study demonstrates the advantages of approaching schema development via
 We show how entities (or "tags") can be aggregated from text data and structured into a taxonomy, which is a schema that implies a partial ordering of entities with parent, child, and sibling relationships.
 Mining tag taxonomies from text data is a requisite for capturing semantic relations and modeling word associations.
 For example, organizing tag information in a taxonomy helps to structure valid groups of tags to describe a certain concept.
+
+The Scaffold actions of "assimilate" and "accommodate" apply to taxonomies.
+
 **Assimilation**: 
+
 ![Assimilation](src/images/assimilate.png)
+
 The original subtree is unchanged after the node "Duck" is added.
 
 **Accommodation**: 
+
 ![Accommodation](src/images/accommodate.png)
+
 When the node "Cow" is included in the graph, the edge connecting it is deemed incorrect, either by a human-in-the-loop or machine learning.
 The parent node is changed to "Farm Animals" in order to correct the schema so that it reflects reality. Accommodation modifies the original subtree.
 
