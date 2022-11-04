@@ -15,13 +15,12 @@ We first describe the generic framework and how it assists the TLP community in 
 Then, we illustrate the use of this framework for task analysis and solution design within a specific subset of the schema-development problem, namely, taxonomy creation. 
 Finallly, we demonstrate a case study for an HCAI interface for taxonomy design that addresses key needs as determined within our proposed framework, and demonstrate the utility of our framework for guiding future research efforts that might buid on our example. 
 
-
-# Data-Driven Schema Creation 
+#Data-Driven Schema Creation 
 
 1. as a class of problems, and as-yet unmet need.
 2. related work e.g. knowledge graph mining, topic modeling and techniques for interpretation, clustering, keyphrase extraction.  
 
-# Cognitive Development Background
+#Cognitive Development Background
 
 1. Piaget
   - Schemas
@@ -35,8 +34,7 @@ Finallly, we demonstrate a case study for an HCAI interface for taxonomy design 
   - Piaget more individual-focused
   - Vygotsky centered on social (mentor+mentee) interaction
   - both could be integrated, e.g. (refs)
-
-# Proposed framework
+##Proposed framework
 - Humans and machines are MCOs for each other 
 - the "goal" is an _explicit_, _shared_ schema, such that a priori schemas cannot be assumed but can be leveraged via scaffolding
 - We can achieve this by combining human+machine into a single agent with two sides: we name it a "Scaffold".  
@@ -51,19 +49,18 @@ Finallly, we demonstrate a case study for an HCAI interface for taxonomy design 
 - Using this, we can place common techniques for HCAI in this space easily: 
   - Keyword extraction used to find new terms the human didn't think of as related before? This is machine assimilation -> human accomodation
   - Human providing labeled examples that retrain an embedding model of the corpus vocabulary? this is Human assimilation -> machine accomodation
-  - In both cases the Scaffold accomodated new information to create a better schema. 
+  - In both cases the Scaffold accomodated new information to create a better schema.
 
-# Case study: Taxonomy extraction
+#Case study: Taxonomy extraction
 
-<!-- Only looking at entities, with some kind of partial order (super, sub, sibling).  -->
+Only looking at entities, with some kind of partial order (super, sub, sibling). 
 
 Our case study demonstrates the advantages of approaching schema development via a human-machine scaffold.
 We show how entities (or "tags") can be aggeregated from text data and structured into a taxonomy, which is a schema that implies a partial ordering of entities with parent, child, and sibling relationships.
 Mining tag taxonomies from text data is a requisite for capturing semantic relations and modeling word associations.
 For example, organizing tag information in a taxonomy helps to structure valid groups of tags to describe a certain concept.
 
-
-## Task analysis
+##  Task analysis
 We can build a deeper task analysis of the decisions that get made in this context. 
 Treating the Scaffold as an agent, it must:
 - find (relevant) concepts
@@ -72,10 +69,9 @@ Treating the Scaffold as an agent, it must:
 With just a human, this is like grounded theory. 
 With just a machine, it's single-linkage clustering (if we can assume a metric space)
 
-## Proof-of-concept
+##  Proof-of-concept
 using some algorithms and stuff to do taxonomy building in an HCAI way (we made this). 
 Also discuss gaps and future work that the proposed framework makes obvious would be super helpful here. 
-
-# Conclusion/future work
+##Conclusion/future work
 Write this. 
 
