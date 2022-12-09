@@ -1,5 +1,6 @@
-\documentclass[runningheads]{llncs}
-
+% \documentclass[runningheads]{llncs}
+\documentclass{tufte-handout}
+% \documentclass{article}
 % math/symbols
     % \usepackage{
     %     amsmath, 
@@ -10,24 +11,38 @@
     %     siunitx, 
     % }
 % style prefs
-\usepackage{
-    graphicx,
-    % dblfloatfix,
-    microtype,
-    multirow,
-    tabulary,
-    booktabs,
-    rotating,
-    caption,
-    fancyhdr
-}
+\usepackage{booktabs}
+\usepackage{tabulary}
+\usepackage{multirow}
+
 % special options
 % \usepackage[mathscr]{euscript}
-\usepackage[hyphens]{url}
-\usepackage[smartEllipses,hybrid,inlineFootnotes]{markdown}
-    
+% \usepackage[hyphens]{url}
+\usepackage[
+    inlineFootnotes,
+    definitionLists,
+    smartEllipses,
+    hybrid,
+    definitionLists,
+    % shiftHeadings=1,
+    headerAttributes,
+    microtype
+]{markdown}
+
+\setkeys{Gin}{width=\linewidth}
+\markdownSetup{renderers={
+  image = {\begin{figure}[hbt!]
+    \centering
+    \includegraphics{#3}%
+    \ifx\empty#4\empty\else
+    \caption{#4}%
+    \fi
+    \label{fig:#1}%
+    \end{figure}}
+}}
+
 % macros/commands/setup
-\captionsetup[table]{skip=10pt}
+% \captionsetup[table]{skip=10pt}
 \newcommand{\rowgroup}[1]{\hspace{-1em}#1}
 
 \pagestyle{fancy}
@@ -50,4 +65,10 @@
 \newcommand{\Like}{\mathcal{L}}
 
 
-\begin{document}
+\usepackage[
+    sorting=ydnt,  
+    autocite=footnote, 
+    style=verbose
+]{biblatex}
+\addbibresource{biblio.bib}
+% \begin{document}
